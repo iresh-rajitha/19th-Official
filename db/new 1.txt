@@ -1,0 +1,16 @@
+Create table members(
+	tempNo int(5) not null,
+	Name int(5) not null,
+	NameWithIn int(5) not null,
+	PermanentNo int(5) not null,
+	Village int(5) not null,
+	FathersOcc int(5) not null,
+	MothersOcc int(5) not null,
+	School int(5) not null,
+	ALAttempt int(5) not null,
+	FileName int(5) not null,
+	Password 
+	
+
+
+);

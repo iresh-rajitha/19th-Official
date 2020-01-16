@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+.PrimaryNav {
+    list-style: none;
+    margin: 50px auto;
+    max-width: 720px;
+    padding: 0;
+    width: 100%;
+}
+
+.Nav-item {
+    background: #fff;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 33.3333333333%;
+    text-align: center;
+}
+.Nav-item:first-child {
+    border-radius: 3px 0 0 3px;
+}
+.Nav-item:last-child {
+    border-radius: 0 3px 3px 0;
+}
+.Nav-item.is-active a {
+    color: #e82d00;
+}
+.Nav-item a {
+    color: #121212;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+.Nav-item a:hover {
+    color: #e82d00;
+}
+
+.with-indicator {
+    position: relative;
+    z-index: 0;
+}
+.with-indicator .Nav-item:last-child:before, .with-indicator .Nav-item:last-child:after {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    transition: left 1.3s ease;
+}
+.with-indicator .Nav-item:last-child:before {
+    border: 6px solid transparent;
+    border-top-color: #e82d00;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 16.6666666667%;
+    margin-left: -3px;
+}
+.with-indicator .Nav-item:last-child:after {
+    background: #e82d00;
+    top: -6px;
+    bottom: -6px;
+    left: 0;
+    width: 33.3333333333%;
+    z-index: -1;
+}
+.with-indicator .Nav-item:nth-child(1).is-active ~ .Nav-item:last-child:after {
+    left: 0%;
+}
+.with-indicator .Nav-item:nth-child(1).is-active ~ .Nav-item:last-child:before {
+    left: 16.6666666667%;
+}
+.with-indicator .Nav-item:nth-child(2).is-active ~ .Nav-item:last-child:after {
+    left: 33.3333333333%;
+}
+.with-indicator .Nav-item:nth-child(2).is-active ~ .Nav-item:last-child:before {
+    left: 50%;
+}
+.with-indicator .Nav-item:nth-child(1):hover ~ .Nav-item:last-child:after {
+    left: 0% !important;
+}
+.with-indicator .Nav-item:nth-child(1):hover ~ .Nav-item:last-child:before {
+    left: 16.6666666667% !important;
+}
+.with-indicator .Nav-item:nth-child(2):hover ~ .Nav-item:last-child:after {
+    left: 33.3333333333% !important;
+}
+.with-indicator .Nav-item:nth-child(2):hover ~ .Nav-item:last-child:before {
+    left: 50% !important;
+}
+.with-indicator .Nav-item:last-child:hover:before, .with-indicator .Nav-item:last-child.is-active:before {
+    left: 83.3333333333% !important;
+}
+.with-indicator .Nav-item:last-child:hover:after, .with-indicator .Nav-item:last-child.is-active:after {
+    left: 66.6666666667% !important;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.PrimaryNav:before,
+.PrimaryNav:after {
+    content: " ";
+    display: table;
+}
+
+.PrimaryNav:after {
+    clear: both;
+}
+
+html {
+    background-color: #121212;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.toggle {
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+}
